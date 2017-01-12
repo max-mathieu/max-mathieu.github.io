@@ -1,0 +1,25 @@
+title: "Your blog title"
+description: >
+  Your blog description. This shows in meta fields for search engines and in your footer.
+url: "" # if you use a custom domain instead github.io
+twitter:
+  username: jekyllrb
+github:
+  username: jekyll
+
+# Build settings
+markdown: kramdown
+permalink: /:title/
+gems:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-avatar
+  - jekyll-gist
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - .gitignore
