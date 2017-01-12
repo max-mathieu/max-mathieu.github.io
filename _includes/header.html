@@ -1,0 +1,11 @@
+<a href="{{ site.url }}{{ site.baseurl }}" class="avatar">
+  {% avatar {{site.github.username}} size=60 %}
+  <span>{{ site.title }}</span>
+</a>
+
+<nav>
+  {% assign nav_pages = site.pages | sort:'nav_index' %}
+  {% for item in nav_pages %}
+    {% if item.nav_index %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}
+  {% endfor %}
+</nav>

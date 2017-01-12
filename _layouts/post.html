@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<article>
+  <h1>{{ page.title }}</h1>
+
+  <div class="entry">
+    {{ content }}
+  </div>
+
+  <div class="tags">
+    {% for tag in page.tags %}
+      <a href="{{ 'tags' | relative_url }}#{{ tag | slugify }}">#{{ tag }}</a>
+    {% endfor %}
+  </div>
+  <div class="date">
+    &mdash; Posted {{ page.date | date: "%B %e, %Y" }}
+  </div>
+</article>

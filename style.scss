@@ -1,0 +1,297 @@
+---
+---
+@import "reset";
+@import "variables";
+
+@mixin small-screen {
+  @media only screen and (max-width : 768px) {
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: $bodyBackground;
+  font: 16px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $textColor;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 0 10px;
+  width: 100%;
+  &:after {
+    content: ' ';
+    clear: both;
+    display: table;
+  }
+}
+
+.header-wrapper {
+  background: $headerBackground;
+  border-bottom: 1px solid $borderColor;
+}
+header {
+  &.container {
+    padding: 10px 10px;
+  }
+  a {
+    color: $headerTextColor;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px $headerTextShadow;
+  }
+  .avatar {
+    * {
+      vertical-align: middle;
+    }
+    span {
+      font-size: 25px;
+      font-weight: 100;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+      margin-right: 5px;
+      border-radius: 100%;
+      border: 1px solid $headerTextShadow;
+    }
+  }
+  nav {
+    float: right;
+    margin-top: 10px;
+    a {
+      display: inline-block;
+      font-size: 1.1em;
+      padding: 5px;
+      margin-left: 5px;
+    }
+  }
+}
+
+a {
+  color: $linkColor;
+}
+
+h1, h2, h3, h4 {
+  margin: .5em 0;
+  a {
+    text-decoration: none;
+  }
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+h3 {
+  font-size: 1.3em;
+  font-weight: 100;
+}
+h4 {
+  font-size: 1em;
+  font-weight: 600;
+}
+hr {
+  width:90%;
+  border:none;
+  border-top: 1px solid $borderColor;
+}
+
+article {
+  margin: 1em 0;
+  .read-more {
+    margin-top: -10px;
+    a {
+      text-decoration: none;
+      font-size: 85%;
+    }
+  }
+  .entry {
+    margin: 1em 0;
+  }
+
+  p, ul, ol, blockquote {
+    margin: 1em 0;
+  }
+  ul, ol {
+    padding-left: 20px;
+  }
+  ul {
+    list-style-type: disc;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  ol ul, ul ol, ul ul, ol ol {
+    margin: 0;
+  }
+  ul ul, ol ul {
+    list-style-type: circle;
+  }
+  blockquote {
+    &:before {
+      content: '';
+      display: block;
+      width: 40%;
+      border-top: 1px solid $borderColor;
+      margin: 0 auto;
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 40%;
+      border-bottom: 1px solid $borderColor;
+      margin: 0 auto;
+    }
+    padding: 1em;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 100;
+    font-style: italic;
+  }
+
+  caption {
+
+  }
+  code, .highlight {
+    color: $highlightTextColor;
+    background-color: $highlightBackground;
+    text-shadow: 1px 1px 0 $highlightTextShadow;
+  }
+  code {
+    font-size: 85%;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    padding: 2px;
+  }
+  .highlight {
+    padding: 5px 8px;
+    border: 1px solid $highlightBorderColor;
+    margin: 20px 0;
+    overflow: scroll;
+    line-height: 1.1;
+  }
+
+  .date {
+    text-align: right;
+    margin-top: 5px;
+    font-size: 85%;
+  }
+  .tags {
+    font-size: 85%;
+    float: left;
+    a {
+      text-decoration: none;
+      padding: 2px 5px;
+      color: $highlightTextColor;
+      background-color: $highlightBackground;
+      text-shadow: 1px 1px 0 $highlightTextShadow;
+    }
+  }
+}
+
+@import "highlight";
+
+footer.container {
+  font-size: 85%;
+  color: $footerTextColor;
+  &.container {
+    padding: 10px 10px;
+  }
+  border-top: 1px solid $borderColor;
+  .title {
+    font-weight: bold;
+  }
+  .social {
+    a {
+      text-decoration: none;
+      * {
+        vertical-align: middle;
+      }
+      svg {
+        fill: $footerLinkColor;
+      }
+    }
+  }
+  .description {
+    width: 75%;
+    float: right;
+    .license {
+      float:right;
+      margin-top: -1px;
+    }
+  }
+}
+
+body.home {
+  header {
+    .avatar {
+      span {
+        font-size: 30px;
+      }
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    nav {
+      a {
+        padding: 10px 5px;
+      }
+    }
+  }
+}
+body.tags {
+  h2 {
+    margin-bottom: 0;
+  }
+  h2 + ul {
+    margin-top: 0;
+  }
+}
+
+@include small-screen {
+  header {
+    nav {
+      float: none;
+      margin-top: 5px;
+      a {
+        display: inline-block;
+        font-size: 1.1em;
+        padding: 0 5px;
+        margin-left: 0;
+      }
+    }
+  }
+  body.home {
+    header {
+      .avatar {
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      nav {
+        a {
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+  footer.container {
+    .description {
+      float: none;
+      width:100%;
+      margin-bottom:10px;
+    }
+  }
+}

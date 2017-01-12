@@ -1,2 +1,2 @@
-# myblog.github.io
-A minimal Jekyll setup ready to run
+# max-mathieu.github.io
+Blogging is so 2016

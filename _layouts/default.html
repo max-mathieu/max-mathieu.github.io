@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+
+  <body class="{{ page.layout }}">
+    <div class="header-wrapper">
+      <header class="container">
+        {% include header.html %}
+      </header>
+    </div>
+
+    <div role="main" class="container">
+      {{ content }}
+    </div>
+
+    <footer class="container">
+      {% include footer.html %}
+    </footer>
+  </body>
+</html>
