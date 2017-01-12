@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+nav_index: 1
 ---
 
 My name is Max Mathieu. I was born in France and I live in Maryland, USA.
