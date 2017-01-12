@@ -1,7 +1,7 @@
 title: "Your blog title"
 description: >
   Your blog description. This shows in meta fields for search engines and in your footer.
-url: "" # if you use a custom domain instead github.io
+url: "https://your-username.github.io"
 twitter:
   username: jekyllrb
 github:
