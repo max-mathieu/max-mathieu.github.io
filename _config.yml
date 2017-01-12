@@ -1,11 +1,12 @@
-title: "Your blog title"
+title: "Max's blog"
 description: >
-  Your blog description. This shows in meta fields for search engines and in your footer.
+  A site where I brain-dump and share stuff. Like all my RT but this time I am the author.
+  Who knows, I might get on Hacker News one day
 url: "" # if you use a custom domain instead github.io
 twitter:
-  username: jekyllrb
+  username: maxence_mathieu
 github:
-  username: jekyll
+  username: max-mathieu
 
 # Build settings
 markdown: kramdown
