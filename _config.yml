@@ -6,6 +6,7 @@ twitter:
   username: jekyllrb
 github:
   username: jekyll
+google_analytics: 
 
 # Build settings
 markdown: kramdown
@@ -19,7 +20,6 @@ gems:
 
 exclude:
   - Gemfile
-  - Gemfile.lock
   - README.md
   - LICENSE
   - .gitignore
