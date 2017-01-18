@@ -2,7 +2,8 @@
 layout: post
 title: "It's 2017, why not start a blog?"
 tags:
-  - misc
+  - jekyll
+  - meta
 ---
 
 Let's pretend that this site is just a pretext to try out github pages and jekyll, so I can run this for free, just by editing a few markdown files.

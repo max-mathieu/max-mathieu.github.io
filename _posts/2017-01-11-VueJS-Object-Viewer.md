@@ -3,7 +3,6 @@ layout: post
 title: A simple recursive object viewer for VueJS
 tags:
   - vuejs
-  - snippet
 ---
 
 I needed a quick way to turn some metadata into a nested `<ul>` list.

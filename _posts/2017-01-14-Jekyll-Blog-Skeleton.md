@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Open sourcing the jekyll setup of this blog
-tags: misc
+tags:
+  - jekyll
+  - meta
 ---
 As stated in [my first post here]({{ site.baseurl }}{% post_url 2017-01-10-First-Post %}), just before going live with this blog, I decided to split it up so anyone could fork the "core" jekyll setup, without getting all my ~~crappy~~ fancy posts with it.
 
