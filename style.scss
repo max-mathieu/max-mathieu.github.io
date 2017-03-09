@@ -177,7 +177,18 @@ article {
     overflow: scroll;
     line-height: 1.1;
   }
-
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 90%;
+    td, th {
+      border: 1px solid $borderColor;
+      padding: 5px 8px;
+    }
+    th {
+      background-color: $highlightBackground;
+    }
+  }
   .date {
     text-align: right;
     margin-top: 5px;
